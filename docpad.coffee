@@ -12,32 +12,31 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://website.com"
+			url: "http://diandianxiao.com"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
-				'www.website.com',
-				'website.herokuapp.com'
 			]
 
 			# The default title of our website
-			title: "Your Website"
+			title: "D.Xiao"
 
 			# The website description (for SEO)
 			description: """
-				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+				Design, programming
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+				design, ux, programming, cmu
 				"""
 
 			# The website's styles
 			styles: [
-				'css/style.css'
-				'css/vendor/normalize.css'
-            				'css/vendor/main.css'
+				'/css/style.css'
+				'/css/vendor/normalize.css'
+				'/css/vendor/skeleton.css'
+        '/css/vendor/main.css'
 			]
 
 			# The website's scripts

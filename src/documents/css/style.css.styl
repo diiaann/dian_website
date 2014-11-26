@@ -1,0 +1,203 @@
+//variables
+$serif = 'Sentinel SSm A', 'Sentinel SSm B', Sentinel, Georgia
+$sans = 'Ideal Sans SSm A', 'Ideal Sans SSm B', AvenirNext, Avenir
+$cardWidth = 450px
+$cardHeight = 281px
+$imageWidth = 672px
+
+$linkBlue = #36D0DD
+$linkHover = #335A5D
+$transparentPurple = rgba(123,93,119,0.8)
+
+//image function
+//TODO: use nib's retina functionality
+createImage(imageUrl, width, height)
+  background-image url(imageUrl)
+  background-size width height
+
+body
+  font-family $serif
+  font-weight 300
+  font-style normal
+  color #8c8788
+  font-size 16px
+  line-height 28px
+
+
+// typography
+h1, h2, h3
+  font-family $sans
+h1
+  line-height 48px
+h2
+  font-size 18px
+
+h3
+  font-family $serif
+  font-weight 300
+  font-size 20px
+  font-style italic
+
+a, a:visited, a:link
+  color $linkBlue
+  text-decoration none
+
+a:hover
+  color $linkHover
+
+figcaption
+  font-family $sans
+  font-size 14px
+  font-style italic
+
+.byline
+  font-family $sans
+
+.resume-skills
+  margin-top 20px
+  p
+    font-family $sans
+    font-size 14px
+    line-height 18px
+
+h3.headline
+  font-size 42px
+  line-height 54px
+  font-style normal
+
+// types of lists
+ul.social-icons
+  padding 0px
+  display inline-block
+  li
+    display inline-block
+    font-size 24px
+    margin-right 20px
+
+ul.text-list
+  padding 0 0 0 20px
+
+ul.top-nav
+  padding 0px
+  margin 0px
+  list-style none
+  float right
+  li
+    display inline-block
+    margin-left 25px
+    &:first-of-type
+      margin-left 0px
+    a
+      color #9D9D9D
+      font-family $sans
+      text-decoration none
+      font-size 24px
+      line-height 48px
+
+      &:hover
+        color #222
+// header
+header
+ &.header
+  margin 40px 0 50px 0
+ h1
+  font-weight 200
+  font-size 36px
+  margin 0
+  a
+    color #222
+
+//footer
+footer
+  padding 30px 0px
+  .colophon
+    font-family $sans
+    font-size 14px
+
+//cards for homepage
+a.card
+  font-family $sans
+  text-decoration none
+  font-weight 500
+  color #222
+
+.card
+  border 1px solid #ccc
+  width 100%
+  height $cardHeight
+  display inline-block
+  position relative
+  background-position center
+  + .card
+    margin-top 20px
+  &.hubub
+    createImage('../public/home_hubub.png',$cardWidth, $cardHeight)
+  &.ubinosh
+    createImage('../public/bid_home.jpg', $cardWidth, $cardHeight)
+  &.capstone
+    createImage('../public/home_playpower.png', $cardWidth, $cardHeight)
+  &.map
+    createImage('../public/home_map.png' ,$cardWidth, $cardHeight)
+  &.versal
+    createImage('../public/home_versal2.png', $cardWidth, $cardHeight)
+  &.diagram
+    createImage('../public/home_diagram.png', $cardWidth, $cardHeight)
+  &:hover
+    border 1px solid $transparentPurple
+    .card-details
+      visibility visible
+  .card-details
+    visibility hidden
+    color white
+    width 100%
+    height 100%
+    position absolute
+    top 0
+    background-color $transparentPurple
+    h3
+      margin 0
+      font-family $sans
+      font-size 22px
+      font-style normal
+    p
+      font-size 14px
+    .text
+      margin 20px
+
+.main
+  margin-top 20px
+
+.sidebar
+  .details
+    margin-top 108px
+    h6
+      margin 0
+      font-family $sans
+      font-size 14px
+    p
+      font-family $sans
+      padding 0px
+      margin 0px
+      font-size 14px
+      line-height 24px
+
+//utilities
+.border
+  border 1px solid #ccc
+
+.margin-b10
+  margin-bottom 20px
+
+//hacky stuff that ideally goes away...
+.container .seven-tenths.column
+  margin-right 20px
+.homepage
+  margin-top 40px
+
+//media queries
+@media screen and (min-width: 480px) and (max-width: 767px)
+  ul.top-nav
+    float none
+
+
+

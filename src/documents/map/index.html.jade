@@ -1,0 +1,54 @@
+---
+layout: default
+title: marauder
+---
+.container
+	.main.seven-tenths.column
+		h1 marauder's map
+
+		h3 For my web application class, we were asked to create a web app using canvas and node.js.
+		p After some deliberation, we decided one of the less contrived uses of Canvas would be a map.
+			| While studying on campus, I would always wonder if there was a talk or an info session nearby
+			| that was interesting (or at least giving away free food).
+			| That ended up being the inspiration for making a map view of events.
+
+		p Our first choice would have been to use Google Maps but to even the playing field, we were not allowed to use outside libraries not taught in class.
+			| The university has an official map that I gutted unecessary details and shadowing from to use.
+
+		p After some planning and sketching, we then spent the full day coding the application.
+
+		p After a mandatory testing session in class, we were able to make some improvements to the experience.
+			| Some improvements included a selected view and using color to distinguish between types of events.
+		figure
+			img.border(src='../public/map.png', width='672px', height='429px')
+			figcaption To add an event, you simply fill out the form with event details
+		br
+		figure
+			img.border(src='../public/map_closeup.png', width='672px', height='369px')
+			figcaption On form success, you enter a state in which you can drop a pin for your event.
+		br
+		figure
+			img.border(src='../public/map2.png', width='672px', height='452px')
+			figcaption There's a regular list view of events.
+		p Overall the project was a success. The professor and TA were impressed with how much work was done in a short time span.
+			| A few weeks after the project was over, I noticed that craigslist has a similar option for housing listings.
+			| We even dealt with close pins similarily, which is to group them together and show all of them on click/hover.
+		figure
+			img(src='../public/map_craigslist.png', width='672px', height='443px')
+			figcaption craigslist map view
+
+	.sidebar.four.columns
+		.details
+			h6 collaborators:
+			p Michael Ryan
+			h6 timeframe:
+			p 3 days
+			h6 deliverable:
+			p Application
+			h6 self critique:
+			p I think it would have been better to hide the form and show it in a modal.
+				| This way the map can be larger and full-width.
+				| It would cater more to finding events which is a more common use case than adding events.
+			p During the placement of the pin on the map, it would be better to gray out areas that can't be clicked.
+			p It would have been great to have devoted more time to improving the 'artwork' and picking better colors.
+
